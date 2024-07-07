@@ -6,9 +6,44 @@
     <title>Form</title>
 </head>
 <body>
-    <form action="" method="post">
+    <form action="" method="post" >
+        {% csrf_token %}
         {{form}}
         <input type="submit" value="Submit">
     </form>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(255, 255, 255);
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        input[type="submit"]{
+            margin-top: 10px;
+            padding: 6px 12px;
+            background-color: rgb(39, 167, 218);
+            color: rgb(0, 0, 0);
+            border: none;
+            cursor: pointer;
+            border-radius: 0.5rem;
+        }
+        form {
+            background-color: rgb(203, 218, 218);
+            padding: 10px;
+            border-radius: 0.5rem;
+            width: 90vw;
+            max-width: 700px;
+            margin: 20px auto;
+        }
+        .form-control {
+            margin: 10px;
+            padding: 10px;
+            border-radius: 0.5rem;
+            border: none;
+        }
+    </style>
 </body>
 </html>
