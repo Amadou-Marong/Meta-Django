@@ -6,7 +6,5 @@ from .forms import LogForm
 
 def form_view(request):
     form = LogForm()
-    context = {
-        'form': form
-    }
+    context = {'form': form}
     return render(request, 'home.html', context)
